@@ -16,5 +16,21 @@ namespace HomeWorckCityFair
             _location = location;
             _vendors = new List<Vendor>();
         }
+
+        public bool AssignVendor(Vendor vendor)
+        {
+            if (_vendors.Contains(vendor) && vendor == null)
+            {
+                return false;
+            }
+
+            _vendors.Add(vendor);
+            return true;
+        }
+
+        public bool RemoveVendor(Vendor vendor)
+        {
+            return _vendors.Remove(vendor);
+        }
     }
 }
