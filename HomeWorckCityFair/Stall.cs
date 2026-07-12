@@ -8,5 +8,13 @@ namespace HomeWorckCityFair
 {
     public class Stall
     {
+        private string _location;
+        private List<Vendor> _vendor;
+
+        public Stall(string location)
+        {
+            _location = location;
+            _vendor = new List<Vendor>();
+        }
     }
 }
