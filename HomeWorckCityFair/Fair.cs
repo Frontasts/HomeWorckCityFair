@@ -8,5 +8,11 @@ namespace HomeWorckCityFair
 {
     public class Fair
     {
+        private List<Stall> _stalls;
+
+        public Fair()
+        {
+            _stalls = new List<Stall>();
+        }
     }
 }
