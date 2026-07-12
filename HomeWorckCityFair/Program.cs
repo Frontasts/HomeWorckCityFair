@@ -14,9 +14,11 @@ namespace HomeWorckCityFair
             Vendor vendor2 = new Vendor("Борис Козлов");
             Vendor vendor3 = new Vendor("Виктория Новикова");
 
-            Stall stallCenter = new Stall("Центральная площадь");
-            Stall stallPark = new Stall("Городской парк");
-            Stall stallMarket = new Stall("Рынок на востоке");
+            Fair fair = new Fair();
+
+            Stall stallCenter = fair.AddStall("Центральная площадь");
+            Stall stallPark = fair.AddStall("Городской парк");
+            Stall stallMarket = fair.AddStall("Рынок на востоке");
 
             Console.WriteLine(stallCenter.AssignVendor(vendor1));
             Console.WriteLine(stallCenter.AssignVendor(vendor2));
@@ -27,11 +29,6 @@ namespace HomeWorckCityFair
             Console.WriteLine(stallMarket.AssignVendor(vendor1));
             Console.WriteLine(stallMarket.AssignVendor(vendor3));
             Console.WriteLine();
-
-            Fair fair = new Fair();
-            Console.WriteLine(fair.AddStall(stallCenter));
-            Console.WriteLine(fair.AddStall(stallPark));
-            Console.WriteLine(fair.AddStall(stallMarket));
 
             Stall[] stalls = fair.GetAllStalls();
             Console.WriteLine();

@@ -15,15 +15,11 @@ namespace HomeWorckCityFair
             _stalls = new List<Stall>();
         }
 
-        public bool AddStall(Stall stall)
+        public Stall AddStall(string location)
         {
-            if(stall == null)
-            {
-                return false;
-            }
-
+            Stall stall = new Stall(location);
             _stalls.Add(stall);
-            return true;
+            return stall;
         }
 
         public Stall[] GetAllStalls()
