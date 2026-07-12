@@ -8,5 +8,16 @@ namespace HomeWorckCityFair
 {
     public class Vendor
     {
+        private string _name;
+
+        public Vendor(string Name)
+        {
+            _name = Name;
+        }
+
+        public string GetName()
+        {
+            return _name;
+        }
     }
 }
