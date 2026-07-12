@@ -32,5 +32,14 @@ namespace HomeWorckCityFair
         {
             return _vendors.Remove(vendor);
         }
+
+        public Vendor[] GetAllVendor()
+        {
+            int vendorLenght = _vendors.Count();
+            Vendor[] vendors = new Vendor[vendorLenght];
+
+            _vendors.CopyTo(vendors);
+            return vendors;
+        }
     }
 }
