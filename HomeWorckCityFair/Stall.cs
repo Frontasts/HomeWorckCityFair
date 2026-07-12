@@ -41,5 +41,10 @@ namespace HomeWorckCityFair
             _vendors.CopyTo(vendors);
             return vendors;
         }
+
+        public string GetLocation()
+        {
+            return _location;
+        }
     }
 }
